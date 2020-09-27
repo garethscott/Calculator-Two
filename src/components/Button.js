@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Button = (props) => {
     return (
-        <StyledButton>
+        <StyledButton onClick={() => props.handleAddToInput(props.children)}>
             {props.children}
         </StyledButton>
     )

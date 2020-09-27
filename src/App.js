@@ -1,50 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from './components/Button';
 import AddButton from './components/AddButton';
 import ClearButton from './components/ClearButton';
 import OnButton from './components/OnButton';
 import Input from './components/Input';
+import EqualsButton from './components/EqualsButton'
 import './App.css';
 
 function App() {
+
+  const [input, setInput] = useState({
+    value: '',
+  })
+
+  const handleAddToInput = (val) => {
+    setInput({
+      value: input.value + val,
+    })
+  }
+
+  const handleEquals = () => {
+    setInput({
+      value: eval(input.value)
+    })
+  }
 
   return (
     <StyledBody>
       <StyledWrapper>
         <StyledCalcTop>
-          <Input />
+          <Input input={input.value}></Input>
         </StyledCalcTop>
         <StyledCalcBottom>
           <StyledBtnCont>
             <StyledTopHozRow>
               <OnButton>On</OnButton>
-              <ClearButton>Clear</ClearButton>
-              <Button>/</Button>
+              <ClearButton handleClear={() => setInput({ value: '' })}>Clear</ClearButton>
+              <Button handleAddToInput={handleAddToInput}>/</Button>
             </StyledTopHozRow>
             <StyledBottomCont>
               <StyledVertRow>
-                <Button>7</Button>
-                <Button>4</Button>
-                <Button>1</Button>
-                <Button>.</Button>
+                <Button handleAddToInput={handleAddToInput}>7</Button>
+                <Button handleAddToInput={handleAddToInput}>4</Button>
+                <Button handleAddToInput={handleAddToInput}>1</Button>
+                <Button handleAddToInput={handleAddToInput}>.</Button>
               </StyledVertRow>
               <StyledVertRow>
-                <Button>8</Button>
-                <Button>5</Button>
-                <Button>2</Button>
-                <Button>0</Button>
+                <Button handleAddToInput={handleAddToInput}>8</Button>
+                <Button handleAddToInput={handleAddToInput}>5</Button>
+                <Button handleAddToInput={handleAddToInput}>2</Button>
+                <Button handleAddToInput={handleAddToInput}>0</Button>
               </StyledVertRow>
               <StyledVertRow>
-                <Button>9</Button>
-                <Button>6</Button>
-                <Button>3</Button>
-                <Button>=</Button>
+                <Button handleAddToInput={handleAddToInput}>9</Button>
+                <Button handleAddToInput={handleAddToInput}>6</Button>
+                <Button handleAddToInput={handleAddToInput}>3</Button>
+                <EqualsButton handleEquals={handleEquals}>=</EqualsButton>
               </StyledVertRow>
               <StyledVertRow>
-                <Button>*</Button>
-                <Button>-</Button>
-                <AddButton>+</AddButton>
+                <Button handleAddToInput={handleAddToInput}>*</Button>
+                <Button handleAddToInput={handleAddToInput}>-</Button>
+                <AddButton handleAddToInput={handleAddToInput}>+</AddButton>
               </StyledVertRow>
             </StyledBottomCont>
           </StyledBtnCont>

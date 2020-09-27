@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ClearButton = (props) => {
     return (
-        <StyledClearButton>
+        <StyledClearButton onClick={props.handleClear}>
             {props.children}
         </StyledClearButton>
     )
