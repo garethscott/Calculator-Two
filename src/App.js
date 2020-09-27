@@ -3,18 +3,22 @@ import styled from 'styled-components';
 import Button from './components/Button';
 import AddButton from './components/AddButton';
 import ClearButton from './components/ClearButton';
+import OnButton from './components/OnButton';
+import Input from './components/Input';
 import './App.css';
 
 function App() {
+
   return (
     <StyledBody>
       <StyledWrapper>
         <StyledCalcTop>
-
+          <Input />
         </StyledCalcTop>
         <StyledCalcBottom>
           <StyledBtnCont>
             <StyledTopHozRow>
+              <OnButton>On</OnButton>
               <ClearButton>Clear</ClearButton>
               <Button>/</Button>
             </StyledTopHozRow>
@@ -70,6 +74,9 @@ const StyledCalcTop = styled.div`
    height: 27%;
    background-color: rgb(29, 175, 235);
    border-radius: 15px 15px 0px 0px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 `;
 const StyledCalcBottom = styled.div`
    width: 100%;

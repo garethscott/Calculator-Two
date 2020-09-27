@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { createGlogalStyle } from 'style-components';
 
 const Button = (props) => {
     return (

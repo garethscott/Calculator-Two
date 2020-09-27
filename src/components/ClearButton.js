@@ -13,7 +13,7 @@ export default ClearButton;
 
 const StyledClearButton = styled.div`
    height: 40px;
-   width: 183px;
+   width: 120px;
    background-color: rgb(91, 91, 91);
    border-radius: 7px;
    display: flex;

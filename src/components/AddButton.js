@@ -12,7 +12,7 @@ const AddButton = (props) => {
 export default AddButton
 
 const StyledAddButton = styled.div`
-    height: 88px;
+    height: 78px;
     width: 56px;
     background-color: rgb(29, 175, 235);
     border-radius: 7px;
@@ -23,4 +23,5 @@ const StyledAddButton = styled.div`
     font-size: 35px;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    padding-top: 10px;
 `;
