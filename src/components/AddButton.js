@@ -19,5 +19,8 @@ const StyledAddButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-family: 'Baloo Tammudu 2';
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
 `;

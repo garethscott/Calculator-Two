@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// import { createGlogalStyle } from 'style-components';
 
 const Button = (props) => {
     return (
@@ -18,6 +19,9 @@ const StyledButton = styled.div`
    border-radius: 7px;
    display: flex;
    justify-content: center;
-   align-items: center;
+   font-family: 'Baloo Tammudu 2';
+   font-size: 25px;
+   font-weight: 600;
+   color: rgb(91, 91, 91);
 `;
 

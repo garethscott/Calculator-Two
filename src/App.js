@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './components/Button';
 import AddButton from './components/AddButton';
+import ClearButton from './components/ClearButton';
 import './App.css';
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
         </StyledCalcTop>
         <StyledCalcBottom>
           <StyledBtnCont>
-
-            <StyledTopHozRow></StyledTopHozRow>
+            <StyledTopHozRow>
+              <ClearButton>Clear</ClearButton>
+              <Button>/</Button>
+            </StyledTopHozRow>
             <StyledBottomCont>
               <StyledVertRow>
                 <Button>7</Button>
@@ -40,7 +43,6 @@ function App() {
                 <AddButton>+</AddButton>
               </StyledVertRow>
             </StyledBottomCont>
-
           </StyledBtnCont>
         </StyledCalcBottom>
       </StyledWrapper>
@@ -81,26 +83,23 @@ const StyledCalcBottom = styled.div`
 const StyledBtnCont = styled.div`
    height: 84%;
    width: 85%;
-   background-color: green;
 `;
 const StyledTopHozRow = styled.div`
-   height: 38px;
+   height: 40px;
    width: 100%;
    display: flex;
-   background: red;
+   justify-content: space-between;
    margin-bottom: 7px;
 `;
 const StyledBottomCont = styled.div`
    height: 80%;
    width: 100%;
-   background: yellow;
    display: flex;
    justify-content: space-between;
 `;
 const StyledVertRow = styled.div`
    height: 100%;
    width: 56px;
-   background-color: blue;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
